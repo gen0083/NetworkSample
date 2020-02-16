@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/button_thread"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button
+            android:id="@+id/button_thread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thread"
+            app:layout_constraintBottom_toTopOf="@+id/button_rxjava"
+            app:layout_constraintEnd_toStartOf="@+id/button_async_task"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view"
+            />
+
+        <Button
+            android:id="@+id/button_async_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="async task"
+            app:layout_constraintBottom_toBottomOf="@+id/button_thread"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_thread"
+            app:layout_constraintTop_toTopOf="@+id/button_thread"
+            />
+
+        <Button
+            android:id="@+id/button_rxjava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rxjava"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_coroutine"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_thread"
+            />
+
+        <Button
+            android:id="@+id/button_coroutine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="coroutine"
+            app:layout_constraintBottom_toBottomOf="@+id/button_rxjava"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_rxjava"
+            app:layout_constraintTop_toTopOf="@+id/button_rxjava"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

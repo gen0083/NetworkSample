@@ -18,5 +18,10 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.fragment_container, NetworkAccessFragment())
                 .commit()
         }
+        binding.backgroundWork.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, BackgroundWorkFragment())
+                .commit()
+        }
     }
 }
