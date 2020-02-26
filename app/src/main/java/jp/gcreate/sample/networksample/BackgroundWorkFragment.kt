@@ -1,6 +1,5 @@
 package jp.gcreate.sample.networksample
 
-import android.os.AsyncTask
 import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
@@ -43,20 +42,6 @@ class BackgroundWorkFragment : Fragment(), CoroutineScope by MainScope() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonAsyncTask.setOnClickListener {
-            binding.textView.text = "work with AsyncTask"
-            // DO NOT USE THIS WAY.
-            object : AsyncTask<Unit, Unit, String>() {
-                override fun doInBackground(vararg params: Unit?): String {
-                    val result = callApi()
-                    return "with AsyncTask: $result"
-                }
-
-                override fun onPostExecute(result: String?) {
-                    binding.textView.text = result
-                }
-            }.execute()
-        }
         binding.buttonThread.setOnClickListener {
             binding.textView.text = "work with Thread"
             thread {
